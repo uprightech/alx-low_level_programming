@@ -6,6 +6,6 @@
 
 int main(void)
 {
-  write(STDOUT_FILE_DESCRIPTOR, MESSAGE_TO_PRINT, 59);
-  return (1);
+	write(STDOUT_FILE_DESCRIPTOR, MESSAGE_TO_PRINT, 59);
+	return (1);
 }
