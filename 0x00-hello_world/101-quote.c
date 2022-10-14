@@ -4,6 +4,10 @@
 #define STDOUT_FILE_DESCRIPTOR 2
 #define MESSAGE_TO_PRINT "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
 
+/**
+* main - Entry point
+* Return: 1 
+*/
 int main(void)
 {
 	write(STDOUT_FILE_DESCRIPTOR, MESSAGE_TO_PRINT, 59);
