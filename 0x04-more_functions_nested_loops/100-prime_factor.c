@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Finds and prints the largest prime
@@ -6,25 +7,18 @@
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
-	long prime = 612852475143, div;
+	long n, i; /*Declaring statements*/
 
-	while (div < (prime / 2))
+	n = 612852475143;
+	for (i = 2; i < n; i++) /*Start FOR*/
 	{
-		if ((prime % 2) == 0)
-		{
-			prime /= 2;
-			continue;
-		}
-		for (div = 3; div < (prime / 2); div += 2)
-		{
-			if ((prime % div) == 0)
-				prime /= div;
-		}
-	}
-	printf("%ld\n", prime);
+		while (n % i == 0)
+			n = n / i;
+	} /*End For*/
+
+	printf("%lu\n", n); /*Print new line*/
 
 	return (0);
 }
