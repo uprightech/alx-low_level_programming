@@ -9,7 +9,7 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	char *ret = dest;
-	
+
 	if (src == NULL || dest == NULL)
 		return (ret);
 	while (*dest != '\0')
@@ -17,7 +17,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest++;
 	}
 
-	while (n-- && *src!='\0')
+	while (n-- && *src != '\0')
 	{
 		*dest++ = *src++;
 	}
