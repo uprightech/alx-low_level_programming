@@ -6,14 +6,18 @@
 * @n: number of characters to be copied
 * Return: a pointer to the destination string
 */
-char *_strcat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	char *ret = dest;
 
 	if (dest == NULL || src == NULL || n <= 0)
 		return (ret);
 	while (n--)
-		*dest++ = *src++;
-	*dest = '\0';
+	{
+		if (*src == '\0' && n != 0)
+			*dest++ = '\0';
+		else
+			*dest++ = *src++;
+	}
 	return (ret);
 }
