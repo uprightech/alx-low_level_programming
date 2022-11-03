@@ -16,20 +16,20 @@ int _strlen(char *str)
 
 /**
  * check_palindrome - checks to see if a string is a palindrome
- * @l: left hand index
- * @r: right hand index
+ * @lhs: left hand index
+ * @rhs: right hand index
  * @p: possible palindrome
  *
  * Return: 1 if palindrome 0 if not
  */
-int check_palindrome(int l, int r, char *p)
+int check_palindrome(int lhs, int rhs, char *p)
 {
-	if (l >= r)
+	if (lhs >= rhs)
 		return (1);
-	else if (p[l] != p[r])
+	else if (p[lhs] != p[rhs])
 		return (0);
 	else
-		return (check_palindrome(l + 1, r - 1, p));
+		return (check_palindrome(lhs + 1, rhs - 1, p));
 }
 
 /**
